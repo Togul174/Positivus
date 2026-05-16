@@ -1,0 +1,48 @@
+.studies {
+    margin-top: 163.5px;
+
+    &__body {
+        padding: 70px 60px;
+        background-color: var(--color-dark);
+        color: var(--color-main);
+        border-radius: var(--border-radius-45px);
+
+        &-list {
+            @include flex-between;
+
+        }
+
+        &-item {
+            @include flex-start;
+            flex-direction: column;
+            row-gap: 20px;
+
+            &:not(:first-child) {
+                padding-left: 64px;
+            }
+
+            &:not(:last-child) {
+                padding-right: 64px;
+                border-right: 1px solid var(--color-main);
+            }
+        }
+        
+        &-link {
+            display: inline-flex;
+            align-self: start;
+            gap: 15px;
+            font-size: 20px;
+            line-height: 1.4;
+            color: var(--color-green);
+            transition: .2s ease;
+
+            svg {
+                transform: translateY(5px);
+            }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

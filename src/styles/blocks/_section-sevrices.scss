@@ -1,0 +1,98 @@
+.services {
+    padding-top: 140px;
+
+    &__info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-bottom: 123px;
+    }
+
+    &__card {
+        @include flex-between;
+
+        min-height: 310px;
+        border: var(--border-large);
+        border-bottom: 7px solid var(--color-dark);
+        border-radius: var(--border-radius-45px);
+        background-color: var(--color-gray);
+        padding: 50px;
+        column-gap: 30px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            @include shadow;
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            row-gap: 93px;
+        }
+
+        &-title {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        &-link {
+            display: inline-flex;
+            align-items: center;
+            column-gap: 15px;
+            font-size: 20px;
+            font-family: var(--font-regular);
+            transition: .2s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            &-arrow {
+                @include flex-center;
+
+                background-color: var(--color-dark);
+                width: 41px;
+                height: 41px;
+                border-radius: 50%;
+            }
+
+            .white-arrow {
+                background-color: var(--color-main) !important;
+            }
+
+            .white-text {
+                color: var(--color-main) !important;
+            }
+        }
+
+        & img {
+            align-self: center;
+        }
+    }
+
+    &__footer {
+        @include flex-between;
+        
+        background-color: var(--color-gray);
+        border-radius: var(--border-radius-45px);
+
+        &-info {
+            @include flex-start;
+
+            flex-direction: column;
+            max-width: 500px;
+            padding: 60px;
+            row-gap: 26px;
+
+            &-button {
+                align-self: start;
+            }
+        }
+
+        img {
+            margin-block: -23.5px;
+        }
+    }
+}

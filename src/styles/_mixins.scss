@@ -1,0 +1,61 @@
+@use "sass:math";
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-start {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+@mixin flex-end {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin non-decoration {
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}
+
+@mixin hidden-mobile {
+    @media (max-width: 767px) {
+        display: none !important;
+    }
+}
+
+@mixin visible-mobile {
+    display: none !important;
+
+    @media (max-width: 767px) {
+        display: block !important;
+    }
+}
+
+@mixin adaptiv-text($min, $max) {
+    font-size: clamp(#{$min}px, #{math.div($max, 1440) * 100}vw, #{$max}px);
+}
+
+@mixin title-section {
+    border: 1px solid var(--color-green);
+    border-radius: 7px;
+    background-color: var(--color-green);
+    padding: 0 7px;
+}
+
+@mixin shadow {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,92 @@
+.header {
+    @include flex-between;
+    gap: 40px;
+    margin-top: 60px;
+
+    &__logo {
+        flex-shrink: 0;
+        transition: 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+
+    &__nav {
+        flex: 1;
+    }
+
+    &__nav-list {
+        @include flex-end;
+        list-style-type: none;
+        gap: 40px;
+    }
+
+    &__nav-item {
+        font-size: var(--font-size-20px);
+    }
+
+    &__nav-link {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -20%;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-green);
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+
+    .button-transparent {
+        background-color: var(--color-main);
+        color: var(--color-dark);
+        transition: 0.3s ease;
+
+        &:hover {
+            background-color: var(--color-green);
+        }
+    }
+}
+
+.welcome {
+    @include flex-between;
+    padding-block: 70px 104px;
+    column-gap: 30px;
+
+    &__info {
+        @include flex-start;
+
+        flex-direction: column;
+        max-width: 531px;
+        row-gap: 35px;
+
+        .button {
+            align-self: start;
+        }
+    }
+}
+
+.welcome-footer {
+    &__list {
+        @include flex-between;
+
+        &-icon {
+            filter: grayscale(100%);
+            cursor: pointer;
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+    }
+}

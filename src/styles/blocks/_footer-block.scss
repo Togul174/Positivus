@@ -1,0 +1,111 @@
+.footer {
+    &-info {
+        background-color: var(--color-dark);
+        border-radius: var(--border-radius-45px) var(--border-radius-45px) 0 0;
+        color: var(--color-main);
+        padding: 55px 60px 50px;
+    }
+
+    &__nav {
+        @include flex-between;
+        gap: 155px;
+
+        &-logo {
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &-list {
+            display: flex;
+            gap: 40px;
+        }
+
+        &-item {
+            font-size: 18px;
+            border-bottom: 1px solid var(--color-main);
+            transition: 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        &-icons {
+            .icon__list {
+                display: flex;
+                gap: 20px;
+            }
+        }
+    }
+
+    &__body {
+        @include flex-between;
+
+        gap: 154px;
+        margin-block: 66px 50px;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            width: fit-content;
+            color: var(--color-dark);
+            margin-bottom: 27px;
+        }
+
+        &-address {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        gap: 20px;
+        max-width: 634px;
+        width: 100%;
+        padding: 58px 40px;
+        background-color: #292a32;
+        border-radius: var(--border-radius-inputs);
+
+        &-input {
+            max-width: 285px;
+            width: 100%;
+            padding: 22px 35px;
+            background-color: inherit;
+            border: 1px solid var(--color-main);
+            border-radius: var(--border-radius-inputs);
+
+            &::placeholder {
+                color: var(--color-main);
+                font-size: 18px;
+            }
+        }
+
+        &-button {
+            background-color: var(--color-green);
+            border: 1px solid var(--color-green);
+            color: black;
+            cursor: pointer;
+            transition: 0.3s ease;
+
+            &:hover {
+                background-color: var(--color-main);
+                border-color: var(--color-main);
+            }
+        }
+    }
+
+    &__copyright {
+        @include flex-start;
+        gap: 40px;
+        border-top: 1px solid var(--color-main);
+        padding-top: 50px;
+    }
+}

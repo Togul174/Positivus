@@ -1,0 +1,14 @@
+    .section__header {
+        @include flex-start;
+        gap: 40px;
+        padding-bottom: 80px;
+
+        &-title {
+            @include flex-center;
+        }
+
+        &-text {
+            max-width: 580px;
+            max-height: 46px;
+        }
+    }
