@@ -1,0 +1,59 @@
+.working {
+    @include mobile-small {
+        margin-top: 60px;
+    }
+
+    &__dropdown {
+        @include mobile {
+            row-gap: 20px;
+        }
+
+        .dropdown {
+            @include mobile-small {
+                padding: 30px;
+            }
+            @include mobile-xs {
+                padding: 15px;
+            }
+
+            &__left {
+                @include mobile-small {
+                    gap: 33px;
+                }
+
+                &-number {
+                    @include mobile {
+                        font-size: 35px;
+                    }
+
+                    @include mobile-small {
+                        font-size: 30px;
+                    }
+                }
+
+                &-title {
+                    @include mobile {
+                        font-size: 20px;
+                    }
+                    @include mobile-small {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            &__icon {
+                @include mobile {
+                    width: 40px;
+                    height: 40px;
+                    font-style: 40px;
+                }
+
+                @include mobile-small {
+                    width: 30px;
+                    height: 30px;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}

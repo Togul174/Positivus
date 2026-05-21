@@ -17,7 +17,6 @@
         border-radius: var(--border-radius-45px);
         background-color: var(--color-gray);
         padding: 50px;
-        column-gap: 30px;
         transition: all 0.3s ease;
 
         &:hover {
@@ -35,6 +34,7 @@
             display: flex;
             flex-direction: column;
             align-items: start;
+            white-space: nowrap;
         }
 
         &-link {
@@ -68,6 +68,7 @@
         }
 
         & img {
+            display: flex;
             align-self: center;
         }
     }
@@ -86,10 +87,15 @@
             padding: 60px;
             row-gap: 26px;
 
+            &-title {
+                align-self: start;
+            }
+
             &-button {
                 align-self: start;
             }
         }
+
 
         img {
             margin-block: -23.5px;

@@ -1,0 +1,108 @@
+.contact {
+    @include tablet {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    @include mobile {
+        margin-top: 60px;
+        margin-bottom: 90px;
+    }
+
+    &__body {
+        @include tablet {
+            padding: 60px;
+        }
+
+        @include mobile-small {
+            padding: 40px 30px 50px;
+        }
+
+        @include mobile-xs {
+            padding: 20px;
+        }
+    }
+
+    &__form {
+        @include desktop {
+            max-width: 400px;
+        }
+
+        @include tablet {
+            max-width: 100%;
+        }
+        &-buttons {
+            @include mobile {
+                padding-inline: 22px;
+                gap: 60px;
+            }
+
+            @include mobile-xs {
+                padding-inline: 10px;
+                gap: 15px;
+            }
+        }
+
+        &-inputs {
+            @include mobile-small {
+                row-gap: 20px;
+            }
+            label {
+                @include mobile-small {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &-group {
+            @include mobile-small {
+                gap: 10px;
+            }
+        }
+    }
+    &__radio-btn {
+        @include mobile-small {
+            gap: 15px;
+            font-size: 16px;
+        }
+
+        @include mobile-xs {
+            gap: 10px;
+        }
+    }
+
+    &__input {
+        @include mobile-small {
+            padding: 18px 20px;
+            font-size: 16px;
+        }
+
+        @include mobile-xs {
+            padding: 5px;
+        }
+    }
+
+    &__textarea {
+        @include mobile-small {
+            font-size: 16px;
+            min-height: 132px;
+            padding: 18px 20px;
+        }
+    }
+
+    &__submit-btn {
+        @include tablet {
+            width: 100%;
+            padding-inline: 0;
+            margin-top: 30px;
+        }
+    }
+
+    &__illustration {
+        img {
+            @include desktop {
+                max-width: 600px;
+                max-height: 560px;
+            }
+        }
+    }
+}

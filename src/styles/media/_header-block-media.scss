@@ -1,0 +1,21 @@
+.section__header {
+    @include desktop-big {
+        gap: 30px;
+        padding-bottom: 60px;
+    }
+
+    @include desktop {
+        padding-bottom: 50px;
+    }
+
+    @include tablet {
+        padding-bottom: 40px;
+    }
+
+    @include mobile {
+        @include flex-center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+}

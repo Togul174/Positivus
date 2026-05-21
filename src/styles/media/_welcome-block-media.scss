@@ -1,0 +1,188 @@
+.header {
+    @include desktop-big {
+        gap: 30px;
+        margin-top: 50px;
+    }
+
+    @include desktop {
+        gap: 15px;
+        margin-top: 40px;
+    }
+
+    @include mobile-small {
+        margin-top: 30px;
+    }
+
+    &__logo img {
+        @include mobile-small {
+            max-width: 144px;
+        }
+    }
+
+    &__nav-list {
+        @include desktop-big {
+            gap: 30px;
+        }
+
+        @include desktop {
+            gap: 10px;
+        }
+    }
+
+    &__nav-item {
+        @include desktop {
+            font-size: 14px;
+        }
+    }
+
+    .button {
+        @include desktop-big {
+            padding: 15px 30px;
+            font-size: 18px;
+        }
+
+        @include desktop {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    }
+
+    &__burger-button {
+        @include mobile {
+            font-size: 25px;
+        }
+    }
+
+    .theme-switcher {
+        &::before {
+            @include desktop {
+                width: 20px;
+                height: 40px;
+            }
+        }
+
+        &__btn {
+            @include desktop {
+                width: 20px;
+                height: 20px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.welcome {
+    @include desktop {
+        padding-block: 60px 80px;
+    }
+
+    @include tablet {
+        padding-block: 50px 70px;
+    }
+
+    @include mobile-small {
+        padding-block: 40px 60px;
+    }
+
+    &__button {
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__body {
+        @include tablet {
+            @include flex-start;
+            flex-direction: column;
+            gap: 30px;
+
+            .welcome__title {
+                order: 1;
+            }
+
+            svg {
+                max-width: 440px;
+                max-height: 360px;
+                order: 2;
+            }
+
+            .welcome__text {
+                order: 3;
+            }
+
+            .welcome__button {
+                order: 4;
+            }
+        }
+
+        @include mobile-small {
+            gap: 0;
+
+            .welcome__title {
+                padding-bottom: 10px;
+            }
+
+            svg {
+                max-width: 360px;
+                max-height: 310px;
+                padding-bottom: 20px;
+                margin-inline: 14px;
+            }
+
+            .welcome__text {
+                padding-bottom: 40px;
+            }
+        }
+    }
+
+    &__info {
+        @include desktop {
+            max-width: 400px;
+            row-gap: 25px;
+        }
+
+        @include tablet {
+            display: contents;
+        }
+
+        @include mobile-small {
+        }
+    }
+}
+
+.welcome-footer {
+    &__list {
+        @include tablet {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+
+        @include mobile {
+            gap: 38px;
+
+            &-item:nth-child(1) {
+                order: 1;
+            }
+            &-item:nth-child(2) {
+                order: 2;
+            }
+            &-item:nth-child(3) {
+                order: 3;
+            }
+
+            &-item:nth-child(4) {
+                order: 5;
+                transform: translateX(-80px);
+            }
+            &-item:nth-child(5) {
+                order: 4;
+                transform: translateX(-80px);
+            }
+            &-item:nth-child(6) {
+                order: 6;
+                transform: translateX(-80px);
+            }
+        }
+    }
+}

@@ -10,6 +10,8 @@
     }
 
     &__card {
+        width: 100%;
+        background-color: inherit;
         padding: 40px 35px;
         border: var(--border-large);
         border-radius: var(--border-radius-45px);
@@ -29,6 +31,8 @@
 
             img {
                 margin-right: 20px;
+                max-width: 110px;
+                max-height: 110px;
             }
         }
 

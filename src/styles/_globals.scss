@@ -1,3 +1,8 @@
+@import "./media";
+@import "./mixins";
+@import './variables';
+@import './fonts';
+
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +20,10 @@ body {
     max-width: 1440px;
     margin: 0 auto;
     padding-inline: 100px;
+
+    @include mobile {
+        padding-inline: 20px;
+    }
 }
 
 h1 {
@@ -46,11 +55,13 @@ li {
 .button {
     padding: 20px 35px;
     border-radius: var(--border-radius-inputs);
-    font-size: var(--font-size-20px);
+    font-size: 20px;
     color: var(--color-main);
     background-color: var(--color-dark);
+    font-family: var(--font-regular);
     border-color: var(--color-dark);
     transition: 0.3s ease;
+    white-space: nowrap;
 }
 
 .button:hover {

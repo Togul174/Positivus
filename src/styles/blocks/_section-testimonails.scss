@@ -2,7 +2,7 @@
     margin-top: 100px;
 
     &__slider {
-        @include flex-center;
+        @include flex-start;
         flex-direction: column;
         row-gap: 110px;
         padding-block: 84px 54px;
@@ -14,17 +14,13 @@
         &-list {
             @include flex-between;
             column-gap: 50px;
-            scroll-snap-type: x mandatory;
-            overflow-x: scroll;
-
-            &::-webkit-scrollbar {
-                display: none;
-            }
+            width: 100%;
         }
 
         &-item {
             display: flex;
             flex-direction: column;
+            width: 100%;
             gap: 48px;
             min-width: 606px;
         }
@@ -35,7 +31,6 @@
 
         position: relative;
         flex-direction: column;
-        row-gap: 48px;
         border: 1px solid var(--color-green);
         border-radius: var(--border-radius-45px);
         padding: 48px 52px 52px 52px;
@@ -102,11 +97,10 @@
 
     .slider__icons {
         @include flex-center;
-        gap: 20px;
 
         &-list {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             list-style: none;
             margin: 0;
             padding: 0;

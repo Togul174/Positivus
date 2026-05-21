@@ -1,0 +1,63 @@
+.team {
+    @include tablet {
+        margin-top: 80px;
+    }
+
+    @include mobile {
+        margin-top: 60px;
+    }
+
+    &__info {
+        @include desktop {
+            gap: 20px;
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            @include flex-center;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &__card {
+        @include desktop {
+            padding: 25px;
+        }
+
+        @include mobile {
+            padding: 40px 50px;
+        }
+
+        @include mobile-xs {
+            padding: 25px;
+        }
+
+        &-worker {
+            @include mobile {
+                padding-bottom: 20px;
+            }
+
+            img {
+                @include desktop {
+                    margin-right: 10px;
+                }
+            }
+        }
+        &-discr {
+            @include mobile-small {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__button {
+        @include mobile {
+            width: 100%;
+            padding-inline: 0;
+        }
+    }
+}

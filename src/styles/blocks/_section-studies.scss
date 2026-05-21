@@ -13,7 +13,7 @@
         }
 
         &-item {
-            @include flex-start;
+            @include flex-between;
             flex-direction: column;
             row-gap: 20px;
 
@@ -28,13 +28,12 @@
         }
         
         &-link {
-            display: inline-flex;
+            display: flex;
             align-self: start;
             gap: 15px;
             font-size: 20px;
-            line-height: 1.4;
             color: var(--color-green);
-            transition: .2s ease;
+            transition: .3s ease;
 
             svg {
                 transform: translateY(5px);

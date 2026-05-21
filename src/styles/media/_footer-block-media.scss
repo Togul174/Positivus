@@ -1,0 +1,129 @@
+.footer.container {
+    @include mobile {
+        background-color: var(--color-dark);
+    }
+}
+
+.footer {
+    &-info {
+        @include desktop {
+            padding: 45px 50px 40px;
+        }
+
+        @include mobile {
+            border-radius: none;
+            padding: 50px 0 30px 0;
+        }
+    }
+
+    &__nav {
+        @include tablet {
+            @include flex-center;
+            flex-direction: column;
+            gap: 37px;
+        }
+
+        &-panel {
+            @include tablet {
+                @include flex-center;
+                flex-direction: column;
+            }
+        }
+
+        &-list {
+            @include desktop-big {
+                gap: 30px;
+            }
+
+            @include desktop {
+                gap: 20px;
+            }
+            @include tablet {
+                @include flex-center;
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        &-item {
+            @include desktop {
+                font-size: 16px;
+            }
+
+            @include tablet {
+                border: none;
+            }
+        }
+
+    }
+
+    &__body {
+        @include desktop-big {
+            gap: 100px;
+        }
+
+        @include desktop {
+            gap: 70px;
+        }
+
+        @include tablet {
+            @include flex-center;
+            flex-direction: column;
+            gap: 37px;
+        }
+    }
+
+    &__contacts {
+        @include tablet {
+            @include flex-center;
+        }
+        &-address {
+            @include tablet {
+                align-items: center;
+                text-align: center;
+                padding-inline: 47px;
+            }
+        }
+    }
+
+    &__form {
+        @include desktop {
+            @include flex-center;
+            flex-direction: column;
+            padding: 30px;
+        }
+
+        &-input {
+            @include desktop {
+                max-width: 330px;
+            }
+
+            &::placeholder {
+                @include tablet {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &-button {
+            @include desktop {
+                max-width: 330px;
+            }
+        }
+    }
+
+    &__copyright {
+        @include tablet {
+            @include flex-center;
+            flex-direction: column;
+            gap: 37px;
+            padding-top: 37px;
+        }
+    }
+
+    &__privacy {
+        @include tablet {
+            font-size: 16px;
+        }
+    }
+}

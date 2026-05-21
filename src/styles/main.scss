@@ -2,6 +2,8 @@
 @import 'mixins';
 @import 'fonts';
 @import 'globals';
+@import 'media';
+@import 'theme-switcher';
 
 @import 'blocks/welcome-block';
 @import 'blocks/section-sevrices';
@@ -12,4 +14,16 @@
 @import 'blocks/section-testimonails';
 @import 'blocks/section-contact';
 @import 'blocks/footer-block';
+@import 'blocks/burger-menu';
+@import 'blocks/welcome-svg-animation';
+
+@import 'media/welcome-block-media';
+@import 'media/services-block-media';
+@import 'media/working-block-media';
+@import 'media/header-block-media';
+@import 'media/team-block-media';
+@import 'media/contact-block-media';
+@import 'media/footer-block-media';
+@import 'media/studies-block-media';
+@import 'media/testimonials-block-media'
 

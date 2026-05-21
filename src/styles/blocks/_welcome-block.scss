@@ -4,7 +4,7 @@
     margin-top: 60px;
 
     &__logo {
-        flex-shrink: 0;
+        max-width: 220px;
         transition: 0.3s ease;
 
         &:hover {
@@ -23,7 +23,7 @@
     }
 
     &__nav-item {
-        font-size: var(--font-size-20px);
+        font-size: 20px;
     }
 
     &__nav-link {
@@ -46,6 +46,15 @@
         }
     }
 
+    &__burger-button {
+        background-color: inherit;
+        border: none;
+        font-size: 30px;
+        margin-left: auto;
+        align-self: center;
+        padding-bottom: 2px;
+    }
+
     .button-transparent {
         background-color: var(--color-main);
         color: var(--color-dark);
@@ -55,12 +64,46 @@
             background-color: var(--color-green);
         }
     }
+
+    .theme-switcher {
+        @include flex-center;
+        flex-direction: column;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 60px;
+            border: 1px solid var(--color-dark);
+            border-radius: var(--border-radius-inputs);
+            z-index: -1;
+        }
+
+        &__btn {
+            @include flex-center;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+
+            &.active {
+                background-color: var(--color-green);
+                border-radius: var(--border-radius-inputs);
+            }
+        }
+    }
 }
 
 .welcome {
-    @include flex-between;
     padding-block: 70px 104px;
-    column-gap: 30px;
+
+    &__body {
+        @include flex-between;
+        column-gap: 30px;
+    }
 
     &__info {
         @include flex-start;
@@ -72,6 +115,12 @@
         .button {
             align-self: start;
         }
+    }
+
+    svg {
+        overflow: visible;
+        max-width: 600px;
+        max-height: 515px;
     }
 }
 

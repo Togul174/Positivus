@@ -36,13 +36,11 @@
 
         &__header {
             @include flex-between;
-
-            column-gap: 30px;
         }
 
         &__left {
             @include flex-between;
-            gap: 20px;
+            gap: 25px;
             font-family: var(--font-medium);
 
             &-number {
@@ -58,6 +56,7 @@
             @include flex-center;
             width: 58px;
             height: 58px;
+            flex-shrink: 0;
             background-color: var(--color-gray);
             border: 1px solid var(--color-dark);
             border-radius: 50%;
@@ -76,6 +75,26 @@
             margin-top: 30px;
             padding-block: 30px 10px;
             border-top: 1px solid var(--color-dark);
+
+
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition:
+                max-height 0.4s ease-out,
+                opacity 0.3s ease,
+                margin-top 0.3s ease;
+            margin-top: 0;
+            padding-block: 0;
+            border-top: none;
+
+            &.is-open {
+                max-height: 500px;
+                opacity: 1;
+                margin-top: 30px;
+                padding-block: 30px 10px;
+                border-top: 1px solid var(--color-dark);
+            }
         }
     }
 }

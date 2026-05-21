@@ -1,0 +1,26 @@
+body {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+body.dark-theme {
+    background-color: #8298b1;
+    --color-gray: #bbbbbb;
+
+    .welcome-footer__list-icon {
+        filter: none;
+    }
+
+    .button-transparent {
+        background-color: var(--color-gray);
+    }
+
+    .team__card {
+        background-color: var(--color-gray);
+    }
+
+    .dropdown__icon {
+        background-color: var(--color-main);
+    }
+}
