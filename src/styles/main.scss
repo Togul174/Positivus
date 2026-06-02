@@ -1,29 +1,28 @@
-@import 'variables';
-@import 'mixins';
-@import 'fonts';
-@import 'globals';
-@import 'media';
-@import 'theme-switcher';
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'fonts';
+@use 'globals';
+@use 'media' as *;
+@use 'theme-switcher';
 
-@import 'blocks/welcome-block';
-@import 'blocks/section-sevrices';
-@import 'blocks/section-studies';
-@import 'blocks/section-header';
-@import 'blocks/section-working';
-@import 'blocks/section-team';
-@import 'blocks/section-testimonails';
-@import 'blocks/section-contact';
-@import 'blocks/footer-block';
-@import 'blocks/burger-menu';
-@import 'blocks/welcome-svg-animation';
+@use 'blocks/welcome-block';
+@use 'blocks/section-services';
+@use 'blocks/section-studies';
+@use 'blocks/section-header';
+@use 'blocks/section-working';
+@use 'blocks/section-team';
+@use 'blocks/section-testimonials';
+@use 'blocks/section-contact';
+@use 'blocks/footer-block';
+@use 'blocks/burger-menu';
+@use 'blocks/welcome-svg-animation';
 
-@import 'media/welcome-block-media';
-@import 'media/services-block-media';
-@import 'media/working-block-media';
-@import 'media/header-block-media';
-@import 'media/team-block-media';
-@import 'media/contact-block-media';
-@import 'media/footer-block-media';
-@import 'media/studies-block-media';
-@import 'media/testimonials-block-media'
-
+@use 'media/welcome-block-media';
+@use 'media/services-block-media';
+@use 'media/working-block-media';
+@use 'media/header-block-media';
+@use 'media/team-block-media';
+@use 'media/contact-block-media';
+@use 'media/footer-block-media';
+@use 'media/studies-block-media';
+@use 'media/testimonials-block-media';

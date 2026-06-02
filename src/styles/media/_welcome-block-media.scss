@@ -1,3 +1,7 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+@use '../media' as *;
+
 .header {
     @include desktop-big {
         gap: 30px;
@@ -156,6 +160,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 60px;
+            overflow: hidden;
         }
 
         @include mobile {
@@ -184,5 +189,11 @@
                 transform: translateX(-80px);
             }
         }
+    }
+}
+
+.welcome-footer.container {
+    @include mobile {
+        padding-inline: 0;
     }
 }

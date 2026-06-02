@@ -1,3 +1,6 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
 .team {
     display: flex;
     flex-direction: column;
@@ -58,4 +61,8 @@
         padding-inline: 76px;
         align-self: flex-end;
     }
+}
+
+.about-us {
+    margin-bottom: 100px;
 }

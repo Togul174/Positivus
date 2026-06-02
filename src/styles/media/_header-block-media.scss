@@ -1,3 +1,7 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+@use '../media' as *;
+
 .section__header {
     @include desktop-big {
         gap: 30px;

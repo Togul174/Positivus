@@ -1,3 +1,6 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
 .contact {
     margin-top: 140px;
     margin-bottom: 140px;
@@ -21,9 +24,50 @@
         max-width: 556px;
         row-gap: 40px;
 
-        &-buttons {
-            display: flex;
+        &-fieldset {
+            @include flex-start;
             gap: 35px;
+            border: 0;
+
+            .contact__radio {
+                @include flex-between;
+                gap: 14px;
+
+                &-input {
+                    appearance: none;
+                    position: relative;
+                    width: 28px;
+                    height: 28px;
+                    flex-shrink: 0;
+                    cursor: pointer;
+                    border: 1px solid var(--color-dark);
+                    background-color: var(--color-main);
+                    border-radius: 50%;
+                    transition: all 0.3s ease;
+
+                    &:checked {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 50%;
+                            background-color: var(--color-green);
+                        }
+                    }
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+
+                &-label {
+                    font-size: 18px;
+                }
+            }
         }
 
         &-inputs {
@@ -43,34 +87,6 @@
             flex-direction: column;
             gap: 5px;
             padding-top: 5px;
-        }
-    }
-
-    &__radio-btn {
-        @include flex-center;
-        gap: 14px;
-        border: none;
-        background: none;
-        font-size: 18px;
-        cursor: pointer;
-        white-space: nowrap;
-        font-family: var(--font-regular);
-
-        &::before {
-            content: "";
-            width: 28px;
-            height: 28px;
-            border: 1px solid var(--color-dark);
-            background-color: var(--color-main);
-            border-radius: 50%;
-        }
-
-        &.active::before {
-            background: var(--color-main) radial-gradient(circle at center, var(--color-green) 0 60%, transparent 61%);
-            background-size: 16px 16px;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-color: var(--color-main);
         }
     }
 

@@ -1,4 +1,4 @@
-@import "../media";
+@use '../media' as *;
 
 @include tablet-above {
     .welcome svg:hover {

@@ -1,0 +1,48 @@
+<section id="contact" class="contact container">
+    <header class="section__header">
+        <h2 class="section__header-title green-bg">Contact Us</h2>
+        <p class="section__header-text">Connect with Us: Let's Discuss Your <br>Digital Marketing Needs</p>
+    </header>
+    <div class="contact__body">
+        <div class="contact__content">
+            <form class="contact__form" id="contact-form">
+                <fieldset class="contact__form-fieldset">
+                    <div class="contact__radio">
+                        <input type="radio" id="say-hi" name="contact-type" class="contact__radio-input" value="say-hi"
+                            checked>
+                        <label for="say-hi" class="contact__radio-label">Say Hi</label>
+                    </div>
+
+                    <div class="contact__radio">
+                        <input type="radio" id="get-quote" name="contact-type" class="contact__radio-input"
+                            value="get-quote">
+                        <label for="get-quote" class="contact__radio-label">Get a Quote</label>
+                    </div>
+                </fieldset>
+                <div class="contact__form-inputs">
+                    <div class="contact__form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name" class="contact__input">
+                    </div>
+
+                    <div class="contact__form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" placeholder="Email" class="contact__input" required>
+                    </div>
+
+                    <div class="contact__form-group">
+                        <label for="message">Message*</label>
+                        <textarea id="message" name="message" placeholder="Message" class="contact__textarea"
+                            required></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="contact__submit-btn button hidden-mobile">Send Message</button>
+            </form>
+            <div class="contact__illustration hidden-tablet">
+                <img src="./assets/images/contact/Illustration.svg" alt="image">
+            </div>
+
+        </div>
+    </div>
+    <button type="submit" class="contact__submit-btn button visible-mobile" form="contact-form">Send Message</button>
+</section>

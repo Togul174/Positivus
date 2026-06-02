@@ -1,3 +1,7 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+@use '../media' as *;
+
 .studies {
     @include desktop {
         margin-top: 120px;
@@ -23,7 +27,7 @@
         @include mobile {
             padding: 0;
             background-color: inherit;
-            border-radius: none;
+            border-radius: 0;
         }
 
         &-list {

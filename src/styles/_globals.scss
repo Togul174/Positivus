@@ -1,7 +1,7 @@
-@import "./media";
-@import "./mixins";
-@import './variables';
-@import './fonts';
+@use './media' as *;
+@use './mixins' as *;
+@use './variables' as *;
+@use './fonts' as *;
 
 * {
     margin: 0;

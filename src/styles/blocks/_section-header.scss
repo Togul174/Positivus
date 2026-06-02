@@ -1,3 +1,6 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+    
     .section__header {
         @include flex-start;
         gap: 40px;

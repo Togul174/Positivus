@@ -1,3 +1,7 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+@use '../media' as *;
+
 .services {
     @include tablet {
         padding-top: 80px;
