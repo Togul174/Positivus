@@ -48,22 +48,22 @@ module.exports = {
                                 const regex = /<%= require\(['"](.+?)['"]\) %>/g;
                                 let match;
                                 let result = content;
-                                
+
                                 while ((match = regex.exec(content)) !== null) {
                                     const filePath = match[1];
                                     const fullPath = path.resolve(loaderContext.context, filePath);
                                     const fs = require('fs');
                                     let fileContent = '';
-                                    
+
                                     if (fs.existsSync(fullPath)) {
                                         fileContent = fs.readFileSync(fullPath, 'utf8');
                                     } else {
                                         console.error(`File not found: ${fullPath}`);
                                     }
-                                    
+
                                     result = result.replace(match[0], fileContent);
                                 }
-                                
+
                                 return result;
                             },
                         },

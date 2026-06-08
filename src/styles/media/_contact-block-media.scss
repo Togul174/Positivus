@@ -5,11 +5,9 @@
 .contact {
     @include tablet {
         margin-top: 100px;
-        margin-bottom: 100px;
     }
     @include mobile {
         margin-top: 60px;
-        margin-bottom: 90px;
     }
 
     &__body {

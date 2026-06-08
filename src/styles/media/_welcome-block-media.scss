@@ -1,6 +1,6 @@
-@use '../variables' as *;
-@use '../mixins' as *;
-@use '../media' as *;
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "../media" as *;
 
 .header {
     @include desktop-big {
@@ -155,39 +155,17 @@
 }
 
 .welcome-footer {
-    &__list {
-        @include tablet {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 60px;
-            overflow: hidden;
+    &__wrapper {
+        @include desktop-big {
+            gap: 50px;
         }
 
-        @include mobile {
-            gap: 38px;
+        @include desktop {
+            gap: 40px;
+        }
 
-            &-item:nth-child(1) {
-                order: 1;
-            }
-            &-item:nth-child(2) {
-                order: 2;
-            }
-            &-item:nth-child(3) {
-                order: 3;
-            }
-
-            &-item:nth-child(4) {
-                order: 5;
-                transform: translateX(-80px);
-            }
-            &-item:nth-child(5) {
-                order: 4;
-                transform: translateX(-80px);
-            }
-            &-item:nth-child(6) {
-                order: 6;
-                transform: translateX(-80px);
-            }
+        @include tablet {
+            flex-direction: column;
         }
     }
 }

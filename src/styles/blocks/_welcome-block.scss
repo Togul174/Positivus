@@ -1,5 +1,5 @@
-@use '../variables' as *;
-@use '../mixins' as *;
+@use "../variables" as *;
+@use "../mixins" as *;
 
 .header {
     @include flex-between;
@@ -17,6 +17,7 @@
 
     &__nav {
         flex: 1;
+        white-space: nowrap;
     }
 
     &__nav-list {
@@ -56,6 +57,7 @@
         margin-left: auto;
         align-self: center;
         padding-bottom: 2px;
+        color: var(--color-dark);
     }
 
     .button-transparent {
@@ -128,8 +130,26 @@
 }
 
 .welcome-footer {
+    overflow: hidden;
+
+    &__wrapper {
+        @include flex-between;
+        overflow: hidden;
+        gap: 90px;
+
+        &-item {
+            display: flex;
+            width: max-content;
+            gap: 80px;
+        }
+    }
+
     &__list {
         @include flex-between;
+        width: 100%;
+        overflow: hidden;
+        animation: scroll 25s linear infinite;
+        flex-shrink: 0;
 
         &-icon {
             filter: grayscale(100%);
@@ -140,5 +160,48 @@
                 transform: translateY(-5px);
             }
         }
+    }
+
+    &__list-left {
+        display: flex;;
+        overflow: hidden;
+        animation: scrollLeft 10s linear infinite;
+        flex-shrink: 0;
+        gap: 80px;
+    }
+
+    &__list-right {
+        display: flex;
+        overflow: hidden;
+        animation: scrollRight 10s linear infinite;
+        flex-shrink: 0;
+        gap: 80px;
+    }
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }

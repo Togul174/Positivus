@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <defs>
+        <g id="testimonial-dot">
+            <path d="M7.0099 2.05941L14 0L11.9604 7.0099L14 14L7.0099 11.9604L0 14L2.05941 7.0099L0 0L7.0099 2.05941Z" 
+                  fill="currentColor" 
+                  fill-rule="nonzero" />
+        </g>
+        
+        <g id="arrow-left">
+            <path d="M10 0L0 10L10 20" 
+                  stroke="white" 
+                  stroke-width="2" 
+                  fill="none"/>
+        </g>
+        
+        <g id="arrow-right">
+            <path d="M0 0L10 10L0 20" 
+                  stroke="white" 
+                  stroke-width="2" 
+                  fill="none"/>
+        </g>
+    </defs>
+</svg>

@@ -1,5 +1,5 @@
-@use '../variables' as *;
-@use '../mixins' as *;
+@use "../variables" as *;
+@use "../mixins" as *;
 
 .testimonials {
     margin-top: 100px;
@@ -43,12 +43,13 @@
             width: 40px;
             height: 40px;
             position: absolute;
-            border: inherit;
             background-color: var(--color-dark);
-            rotate: 45deg;
-            clip-path: polygon(100% 0, 0 100%, 100% 100%);
+            rotate: -45deg;
+            border-left: 1px solid var(--color-green);
+            border-bottom: 1px solid var(--color-green);
             left: 51px;
             bottom: -21px;
+            z-index: 1;
         }
 
         &-footer {
@@ -121,19 +122,17 @@
             svg {
                 width: 14px;
                 height: 14px;
+                color: var(--color-main);
+                transition: color 0.3s ease;
+                display: block;
             }
 
-            svg path {
-                fill: var(--color-main);
-                transition: 0.3s ease;
+            &:hover svg {
+                color: var(--color-green);
             }
 
-            &:hover svg path {
-                fill: var(--color-green);
-            }
-
-            &.active svg path {
-                fill: var(--color-green);
+            &.active svg {
+                color: var(--color-green);
             }
         }
     }

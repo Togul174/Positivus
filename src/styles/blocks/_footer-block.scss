@@ -1,7 +1,9 @@
-@use '../variables' as *;
-@use '../mixins' as *;
+@use "../variables" as *;
+@use "../mixins" as *;
 
 .footer {
+    margin-top: 140px;
+
     &-info {
         background-color: var(--color-dark);
         border-radius: var(--border-radius-45px) var(--border-radius-45px) 0 0;
