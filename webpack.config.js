@@ -1,7 +1,29 @@
 const path = require('path');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+function includeHtml(content, ctx) {
+    // Ищем вставки вида: <%= require ...%>
+    const regex = /<%= require\(['"](.+?)['"]\) %>/g;
+
+    // Заменяем их содержимым файла
+    return content.replace(regex, (match, filePath) => {
+        // Превращаем путь внутри require в полный путь к файлу
+        const fullPath = path.resolve(ctx, filePath);
+
+        if (!fs.existsSync(fullPath)) {
+            console.error(`Файл не найден: ${fullPath}`);
+            return '';
+        }
+        // Читает файл как текст
+        const fileContent = fs.readFileSync(fullPath, 'utf8');
+
+        // Вставляет файл и снова проверяет, вдруг внутри него тоже есть require
+        return includeHtml(fileContent, path.dirname(fullPath));
+    });
+}
 
 module.exports = {
     mode: 'development',
@@ -45,26 +67,7 @@ module.exports = {
                         options: {
                             sources: false,
                             preprocessor: (content, loaderContext) => {
-                                const regex = /<%= require\(['"](.+?)['"]\) %>/g;
-                                let match;
-                                let result = content;
-
-                                while ((match = regex.exec(content)) !== null) {
-                                    const filePath = match[1];
-                                    const fullPath = path.resolve(loaderContext.context, filePath);
-                                    const fs = require('fs');
-                                    let fileContent = '';
-
-                                    if (fs.existsSync(fullPath)) {
-                                        fileContent = fs.readFileSync(fullPath, 'utf8');
-                                    } else {
-                                        console.error(`File not found: ${fullPath}`);
-                                    }
-
-                                    result = result.replace(match[0], fileContent);
-                                }
-
-                                return result;
+                                return includeHtml(content, loaderContext.context);
                             },
                         },
                     },
